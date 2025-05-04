@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace Lab_7
 {
@@ -90,6 +91,7 @@ namespace Lab_7
 
         public class Commission
         {
+
             public static void Sort(Student[] students)
             {
                 if (students == null || students.Length == 0) return;
@@ -105,6 +107,13 @@ namespace Lab_7
                     }
                     students[j + 1] = current;
                 }
+            }
+
+            public static void SortByAvgMark(Student[] students)
+            {
+                if (students == null || students.Length == 0) return;
+
+                Array.Sort(students, (s1, s2) => s2.AvgMark.CompareTo(s1.AvgMark));
             }
 
             public static Student[] Expel(ref Student[] students)

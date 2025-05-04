@@ -56,7 +56,7 @@ namespace Lab_7
 
             public void Print()
             {
-                Console.WriteLine($"РРјСЏ: {Name}, Р¤Р°РјРёР»РёСЏ: {Surname}, РЎСЂРµРґРЅРёР№ Р±Р°Р»Р»: {AvgMark:F2}");
+                Console.WriteLine($"Имя: {Name}, Фамилия: {Surname}, Средний балл: {AvgMark:F2}");
             }
         }
 
@@ -64,7 +64,7 @@ namespace Lab_7
         {
             private readonly string _name;
             protected readonly Student[] _students;
-            private int _count;
+            protected int _count; // Изменено с private на protected
 
             public Group(string name, int capacity = 10)
             {
@@ -132,7 +132,7 @@ namespace Lab_7
 
             public void Print()
             {
-                Console.WriteLine($"Р“СЂСѓРїРїР°: {Name}, РЎСЂРµРґРЅРёР№ Р±Р°Р»Р»: {AvgMark:F2}");
+                Console.WriteLine($"Группа: {Name}, Средний балл: {AvgMark:F2}");
                 for (int i = 0; i < _count; i++)
                 {
                     _students[i].Print();
